@@ -1,0 +1,67 @@
+%% The collection of neccessary packages for manual
+
+\usepackage[utf8]{inputenc} % Required for international characters
+\usepackage[T1]{fontenc} % Required for output font encoding for international characters
+\usepackage[left=2cm, right=1.5cm, top=2cm, bottom=3cm]{geometry} % Page size
+\linespread{1.3} % 1.5 interval 
+\usepackage[colorlinks]{hyperref} % Colors for hypersmth
+\hypersetup{
+    colorlinks = true,
+    linkcolor= black, % black color for table of contents
+    citecolor= black
+   }
+\usepackage[english,russian]{babel} % English Russian
+\usepackage{XCharter}
+
+\tolerance=2000
+\emergencystretch=10pt
+
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{titlesec} % Table of contents
+\usepackage{indentfirst} % Indent at each paragraph
+% \setcounter{page}{-2} % The first page has the number -2, so the intro has 1.
+\usepackage{amsmath,float,array} % Everyone needs it, don't lie
+\numberwithin{figure}{section} % Figures are numbered with the section number
+\usepackage[dvipsnames]{xcolor} % Allow colors in the documents
+\usepackage{bashful} % Write a code
+\usepackage{listings} % Code
+\usepackage{wrapfig} % figure wrapping
+\usepackage{subfig} % Put two fig side by side
+\usepackage{comment} % comment out large sections
+\usepackage{multirow} % for tables
+\setcounter{secnumdepth}{4} % Create more subsubsubsections
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usepackage{nameref} % Reference by name
+\newcommand*{\secref}[1]{\textbf{\hyperref[{#1}]{\nameref*{#1} Section \ref*{#1}}}} % Create a special command \secref to cite the section with name and number
+
+\usepackage{enumitem}
+
+%% The cleveref is the last
+\usepackage[norsk,nameinlink,capitalize]{cleveref} % Short and capitalized cross-references
+%% Format for equations citation
+\crefrangeformat{equation}{Eqs.~#3#1#4 to~#5#2#6}
+\crefrangeformat{figure}{Figs.~#3#1#4 to~#5#2#6}
+\crefformat{equation}{Eq.~#2#1#3}
+\crefformat{figure}{Fig.~#2#1#3}
+\Crefformat{figure}{Figure.~#2#1#3}
+\crefformat{table}{Table.~#2#1#3}
+\crefformat{section}{Section~#2#1#3} % I think I don't use it
+
+%references
+\usepackage[style=ieee,
+%style=numeric-comp,
+    sorting=none,
+    sortcites=true,
+    doi=false,
+    isbn=false,
+    url=false,
+    date=year,
+    giveninits=true,
+    hyperref]{biblatex}
+\addbibresource{lit.bib}
