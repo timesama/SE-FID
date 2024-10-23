@@ -46,7 +46,32 @@ What is the general result\\
 How it can be used in the future\\
 
 \newpage
-\section{Introduction}
+\section{Introduction}\label{sec:Introduction}
+
+The Time-Domain NMR (TD-NMR) signal of a sample provides quantitative information about its phase composition (rigid, soft, liquid), including the proportions and molecular mobility of these phases. 
+FIDs can be processed using a range of well-developed approaches, including fitting, amplitude averaging, and transformation to the frequency domain, followed by subsequent calculations~\cite{Grunin2023}. 
+\textcolor{red}{In many studies}, FIDs are analyzed by fitting predefined functions, typically based on NNLS algorithms. 
+The choice of an appropriate model directly depends on the mobility regime of the molecules. 
+Multiphase systems often produce multicomponent decays, which can be described by a sum of functions. 
+These combinations are typically selected to minimize the number of variable parameters, which is necessary to improve the accuracy and repeatability of the approximation. 
+\textcolor{red}{In most publications}, the signal parameters—such as amplitudes and NMR relaxation times—are related to the macroscopic properties of the samples. 
+Moreover, probing these parameters can reveal the behavior of the system under controlled external effects and its evolution over time~\cite{vanRooyen2024}.
+
+Several models are used to describe different mobility regimes: Abragamian, Pake, Gaussian, Weibullian, Exponential, and Stretched Exponential \cite{Rntzsch2018}. 
+The Abragamian function \((y(x) = A e^{-t^2/T_2^2} \cdot \frac{\sin(bx)}{bx})\) is frequently employed to represent the shape of transverse magnetization decays recorded in crystalline lattices, where a large number of interacting dipolar-coupled pairs are present \cite{Besghini2019}. 
+Another model used to analyze contributions from molecules with highly restricted mobility is the Pake function, which, unlike the Abragamian model, incorporates the cosine function \((y(x) = A e^{-t^2/T_2^2} \cdot \cos \frac{bx}{2})\).
+For certain types of samples, such as cellulose \cite{Grunin2017, Grunin2019}, the Pake model may yield better fitting results, as evidenced by a higher R². 
+The Gaussian model \((y(x) = A e^{-t^2/T_2^2})\) is also suitable for describing signals from the solid phase, though it can be effective for soft-like systems as well. 
+In general, the decays are modulated by the sample’s origin, particularly its structure.
+
+A different set of equations defined as \((y(x) = A e^{-(t/T_2)^n})\) is characteristic of more isotropic dynamics []. 
+The Weibullian function (or compressed exponential) \cite{Rntzsch2018} with \(1 < n < 2\) deconvolutes contributions primarily from soft- and liquid-like phases. The exponential model \((n = 1)\) is appropriate for molecules with high mobility and is especially effective when long components need to be subtracted. 
+The stretched exponential model \((n < 1)\) indicates heterogeneous distributions of exponential decays, often due to inhomogeneities in the sample itself.
+
+However, interpreting the data through fitting is not always reliable. 
+In some specific cases, residual dipolar couplings in systems with anisotropic motions may lead to non-exponential decays []. 
+Additionally, inaccuracies may arise from permanent magnet inhomogeneities. 
+In polycrystalline samples, estimating interphase signals can be challenging because the signal may contribute to both rigid and soft phases \cite{Gorbunova2022}.
 
 \newpage
 \section{Experiment details}
@@ -189,7 +214,6 @@ The close agreement between these values, within the margin of error, confirms t
 \section{Conclusions}
 
 \newpage
-\section{References}
 \printbibliography
 
 \end{document}
