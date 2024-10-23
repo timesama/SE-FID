@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.7.24)  23 OCT 2024 10:27
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.7.24)  23 OCT 2024 11:32
  restricted system commands enabled.
  file:line:error style messages enabled.
 **c:/Mega/Papers/SE&FID/main
@@ -1090,43 +1090,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--47
  []
 
 [3] [4] [5]
-<images/Original_Corrected_FID.png, id=75, 462.528pt x 346.896pt>
+<images/Original_Corrected_FID.png, id=79, 462.528pt x 346.896pt>
 File: images/Original_Corrected_FID.png Graphic file (type png)
 <use images/Original_Corrected_FID.png>
 Package luatex.def Info: images/Original_Corrected_FID.png  used on input line 75.
 (luatex.def)             Requested size: 284.52756pt x 213.40593pt.
  [6<./images/Original_Corrected_FID.png>]
-<images/Subtracted_FID.png, id=84, 462.528pt x 346.896pt>
+<images/Subtracted_FID.png, id=88, 462.528pt x 346.896pt>
 File: images/Subtracted_FID.png Graphic file (type png)
 <use images/Subtracted_FID.png>
 Package luatex.def Info: images/Subtracted_FID.png  used on input line 90.
 (luatex.def)             Requested size: 284.52756pt x 213.40593pt.
- [7<./images/Subtracted_FID.png>] [8] [9]
+ [7<./images/Subtracted_FID.png>]
+<images/FID_SE.png, id=105, 650.43pt x 505.89pt>
+File: images/FID_SE.png Graphic file (type png)
+<use images/FID_SE.png>
+Package luatex.def Info: images/FID_SE.png  used on input line 139.
+(luatex.def)             Requested size: 284.52756pt x 221.30316pt.
+ [8<./images/FID_SE.png>]
+<images/Rebuild_FID.png, id=117, 462.528pt x 346.896pt>
+File: images/Rebuild_FID.png Graphic file (type png)
+<use images/Rebuild_FID.png>
+Package luatex.def Info: images/Rebuild_FID.png  used on input line 151.
+(luatex.def)             Requested size: 284.52756pt x 213.40593pt.
+LaTeX Font Info:    Font shape `TU/XCharter(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 160.
+LaTeX Font Info:    Font shape `TU/XCharter(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 160.
+<images/Water_Cell_FID.png, id=118, 462.528pt x 346.896pt>
+File: images/Water_Cell_FID.png Graphic file (type png)
+<use images/Water_Cell_FID.png>
+Package luatex.def Info: images/Water_Cell_FID.png  used on input line 170.
+(luatex.def)             Requested size: 284.52756pt x 213.40593pt.
+ [9<./images/Rebuild_FID.png>]
+LaTeX Font Info:    Font shape `TU/XCharter(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 179.
 
-LaTeX Warning: Empty bibliography on input line 128.
+Overfull \hbox (12.41267pt too wide) in paragraph at lines 177--183
+ [][] 
+ []
 
-[10] (./main.aux)
+[10<./images/Water_Cell_FID.png>] [11]
+
+LaTeX Warning: Empty bibliography on input line 193.
+
+[12] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 658B57967364E8747538BFF8C8EB9526;1082.
+(rerunfilecheck)             Checksum: 6193F316AB142B96ACFF56782668A286;1181.
 Package logreq Info: Writing requests to 'main.run.xml'.
 
 \openout1 = main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 30084 strings out of 478285
+ 30152 strings out of 478285
  100000,1977958 words of node,token memory allocated
- 654 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 1 margin_kern, 3 glyph, 17 attribute, 70 glue_spec, 10 attribute_list, 1 write nodes
-   avail lists: 2:579,3:318,4:180,5:623,6:70,7:5477,8:43,9:359,10:11,11:697
- 49272 multiletter control sequences out of 65536+600000
- 55 fonts using 5352935 bytes
+ 678 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 1 margin_kern, 3 glyph, 25 attribute, 70 glue_spec, 14 attribute_list, 1 write nodes
+   avail lists: 2:567,3:318,4:180,5:623,6:70,7:5477,8:43,9:359,10:11,11:697
+ 49313 multiletter control sequences out of 65536+600000
+ 58 fonts using 5994559 bytes
  102i,15n,143p,1067b,1660s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/opentype/public/xcharter/XCharter-Roman.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/xcharter/XCharter-Bold.otf><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (10 pages, 138749 bytes).
+Output written on main.pdf (12 pages, 283658 bytes).
 
-PDF statistics: 149 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 131072)
- 57 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 182 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 131072)
+ 65 words of extra memory for PDF output out of 10000 (max. 100000000)
 

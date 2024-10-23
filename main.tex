@@ -119,6 +119,71 @@ Amplitude = \sqrt{Re^2 + Im^2}
 Additionally, apodization of the spectrum, akin to the time-domain signal, should be performed to ensure zero amplitude at high frequencies, utilizing similar equations as in \cref{eq:apodization}. 
 Once apodized, the acquired spectrum is prepared for further analysis, such as the calculation of the second moment.
 
+\section{SE and FID}\label{sec:SE and FID}
+
+In the analysis of Solid Echo (SE) and Free Induction Decay (FID) signals, several steps are undertaken to ensure precise data acquisition, correction, and interpretation as is described in \cref{sec:FID processing in Time-Domain NMR,sec:FID processing in Frequency-Domain NMR}.
+The SE signals and FID are shown in \cref{fig:FID_SE} a).
+The maxima of the SE signals are then plotted versus corresponding echo times as shown in \cref{fig:FID_SE} b).
+To interpret the data, a Gaussian function is employed for fitting. 
+
+\begin{equation}
+  \label{eq:gaussian}
+  G(x) = A \cdot \exp\left(-\frac{x^2}{2\sigma^2}\right)
+\end{equation}
+
+The Gaussian function is of the standard form, where the key parameter $A$ represents the amplitude. 
+This value is directly derived from the SE signals and offers an essential reference for later stages of the analysis.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{images/FID_SE.png}
+  \caption{a: The overall representation of SE signals and FID (red); b: The SE maxima versus the corresponding echo times}
+  \label{fig:FID_SE}
+\end{figure}
+
+Next, the initial portion of the FID signal, particularly the segment between 10 and 20 microseconds is fitted using the same Gaussian model employed earlier for the SE \cref{eq:gaussian}. 
+It is crucial to ensure that the amplitude of the Gaussian fit matches the maximum amplitude observed at time $t = 0$, as derived from the SE signal maxima.
+After fitting the FID signal, intersection points between the fitted Gaussian curve and the original FID signal are determined. 
+These intersection points highlight critical aspects of the experimental data and assist in reconstructing the hidden portions of the FID using the fitted Gaussian model \cref{fig:Rebuild_FID}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{images/Rebuild_FID.png}
+  \caption{The rebuild FID and the original FID}
+  \label{fig:Rebuild_FID}
+\end{figure}
+
+The final step involves validating the amplitude of the FID, which is rebuilt from the SE maxima. To ensure the accuracy of this reconstruction, the FID of a water sample with a known mass is recorded under identical experimental conditions. The maximum amplitudes of the FIDs for both the water and the cellulose samples are then compared, as these amplitudes correspond directly to the number of protons in each sample. The proton density, calculated using the formula:
+
+\begin{equation}
+  \label{eq:proton_density}
+  \text{Proton density} = \frac{\text{max(Amplitude)}}{ \left(\frac{\text{mass}}{M}\right) \cdot N_A \cdot \text{(number of protons per molecule)} }
+\end{equation}
+
+This formula provides a reference value for the proton density. 
+By multiplying the proton density obtained from the water sample by the number of protons in the cellulose sample, a reference value of 42 is obtained. 
+This reference is then compared to the maximum amplitude of 44 from the rebuilt FID. 
+The close agreement between these values, within the margin of error, confirms the reliability of the proposed method for reconstructing the FID from SE signals.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=10cm]{images/Water_Cell_FID.png}
+  \caption{The recorded FID of water and cellulose sample}
+  \label{fig:Water_Cell_FID}
+\end{figure}
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{|l|c|c|c|c|}
+  \hline
+  \textbf{Compound} & \textbf{Mass (g)} & \textbf{Molar Mass (g/mol)} & \textbf{Proton Density (e-21)} & \textbf{FID Max Amplitude} \\ \hline
+  \textbf{Water}    & 0.0963            & 18.01528                    & 8.522                         & 55                         \\ \hline
+  \textbf{Cellulose} & 0.1334           & 162.1406                    & 8.949                         & 44                         \\ \hline
+  \end{tabular}
+  \caption{Physical properties and FID amplitudes of Water and Cellulose samples}
+  \label{tab:fid_data}
+  \end{table}
+  
 
 \newpage
 \section{Conclusions}
